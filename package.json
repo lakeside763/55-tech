@@ -1,0 +1,50 @@
+{
+  "name": "arbitrage-detection-library",
+  "version": "1.0.0",
+  "description": "A comprehensive library for detecting arbitrage opportunities in sports betting odds across multiple bookmakers",
+  "main": "market-arbitrage.js",
+  "types": "market-arbitrage.d.ts",
+  "scripts": {
+    "build": "npx tsc",
+    "start": "npx ts-node index.ts",
+    "example": "npx ts-node example-usage.ts",
+    "analyze": "npx ts-node market-arbitrage.ts",
+    "test": "npm run build && node market-arbitrage.js"
+  },
+  "keywords": [
+    "arbitrage",
+    "sports-betting",
+    "odds-analysis",
+    "bookmaker",
+    "betting-opportunities",
+    "typescript",
+    "library"
+  ],
+  "author": "",
+  "license": "MIT",
+  "packageManager": "pnpm@10.17.1",
+  "dependencies": {
+    "@types/node": "^24.6.0",
+    "axios": "^1.12.2",
+    "dotenv": "^17.2.3"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.2"
+  },
+  "exports": {
+    ".": {
+      "import": "./market-arbitrage.js",
+      "require": "./market-arbitrage.js",
+      "types": "./market-arbitrage.d.ts"
+    }
+  },
+  "files": [
+    "market-arbitrage.js",
+    "market-arbitrage.d.ts",
+    "example-usage.js",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
