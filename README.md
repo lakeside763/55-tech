@@ -20,7 +20,7 @@ This library analyzes odds data from multiple bookmakers to identify arbitrage o
 ### Prerequisites
 
 - Node.js 14.0.0 or higher
-- npm or pnpm package manager
+- pnpm package manager
 
 ### Installation
 
@@ -143,15 +143,6 @@ interface ArbitrageOpportunity {
 └── README.md            # This file
 ```
 
-## ⚙️ Configuration
-
-### Environment Variables
-
-| Variable | Description | Default |
-|----------|-------------|---------|
-| `BASE_URL` | API base URL | `https://api.oddspapi.io` |
-| `API_KEY` | Your API access key | Required for API calls |
-
 ### API Endpoint
 
 The library expects the API to return data in the following format:
@@ -159,73 +150,3 @@ The library expects the API to return data in the following format:
 GET /v4/odds?fixtureId={id}&oddsFormat=decimal&verbosity=3&apiKey={key}
 ```
 
-## 🔧 Available Scripts
-
-| Script | Description |
-|--------|-------------|
-| `pnpm start` | Run analysis with default settings |
-| `pnpm build` | Compile TypeScript to JavaScript |
-| `pnpm test` | Build and run compiled JavaScript |
-
-## 📈 Understanding Arbitrage
-
-Arbitrage opportunities occur when the combined implied probabilities of all outcomes in a market are less than 100%. This happens when different bookmakers offer odds that, when combined optimally, guarantee a profit.
-
-### Key Concepts
-
-- **Implied Probability**: `1 / odds` - what the bookmaker thinks is the chance of an outcome
-- **Total Implied Probability**: Sum of all implied probabilities in a market
-- **Arbitrage Percentage**: The guaranteed profit percentage
-- **Bet Distribution**: Optimal stake allocation across different bookmakers
-
-### Example Calculation
-
-If Team A has odds of 2.1 at Bookmaker 1 and Team B has odds of 2.1 at Bookmaker 2:
-- Team A implied probability: 1/2.1 = 47.6%
-- Team B implied probability: 1/2.1 = 47.6%
-- Total: 95.2% (less than 100% = arbitrage opportunity!)
-- Profit: (100% - 95.2%) / 95.2% = 5.04%
-
-## 🚨 Risk Disclaimer
-
-This library is for educational and analytical purposes. Sports betting involves risk, and arbitrage opportunities:
-
-- May have limited time windows
-- Could be restricted by bookmaker limits
-- Require careful account management
-- May violate some bookmakers' terms of service
-
-Always understand the risks and terms before placing any bets.
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🆘 Support
-
-For questions, issues, or feature requests:
-
-1. Check existing [Issues](../../issues)
-2. Create a new issue with detailed information
-3. Include sample data and error messages when reporting bugs
-
-## 🔮 Future Enhancements
-
-- [ ] Real-time odds monitoring
-- [ ] Multiple API provider support
-- [ ] Web dashboard interface
-- [ ] Automated bet placement (with appropriate safeguards)
-- [ ] Historical arbitrage tracking
-- [ ] Email/SMS notifications for opportunities
-
----
-
-**Happy arbitrage hunting! 🎯**
