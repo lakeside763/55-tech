@@ -1,0 +1,43 @@
+{
+  "fixtureId": "clear_arbitrage_test",
+  "participant1Name": "Manchester United",
+  "participant2Name": "Liverpool",
+  "sportName": "Soccer", 
+  "tournamentName": "Premier League",
+  "bookmakerOdds": {
+    "bookmaker_a": {
+      "bookmakerIsActive": true,
+      "bookmakerFixtureId": "arb_test",
+      "fixturePath": "https://bookmaker-a.com",
+      "markets": {
+        "101": {
+          "bookmakerMarketId": "match_winner",
+          "outcomes": {
+            "101": {
+              "players": {
+                "0": {
+                  "active": true,
+                  "price": 2.5,
+                  "bookmakerOutcomeId": "manu_win",
+                  "changedAt": "2025-10-07T10:00:00Z",
+                  "playerName": "Manchester United"
+                }
+              }
+            },
+            "102": {
+              "players": {
+                "0": {
+                  "active": true,
+                  "price": 2.5,
+                  "bookmakerOutcomeId": "liverpool_win",
+                  "changedAt": "2025-10-07T10:00:00Z",
+                  "playerName": "Liverpool"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

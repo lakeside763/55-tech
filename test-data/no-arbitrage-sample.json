@@ -1,0 +1,144 @@
+{
+  "fixtureId": "arbitrage_test_fixture",
+  "participant1Name": "Arsenal",
+  "participant2Name": "Chelsea", 
+  "sportName": "Soccer",
+  "tournamentName": "Premier League",
+  "bookmakerOdds": {
+    "bet365": {
+      "bookmakerIsActive": true,
+      "bookmakerFixtureId": "test_123",
+      "fixturePath": "https://bet365.com",
+      "markets": {
+        "101": {
+          "bookmakerMarketId": "match_winner",
+          "outcomes": {
+            "101": {
+              "players": {
+                "0": {
+                  "active": true,
+                  "price": 2.2,
+                  "bookmakerOutcomeId": "arsenal_win",
+                  "changedAt": "2025-10-07T10:00:00Z",
+                  "playerName": "Arsenal"
+                }
+              }
+            },
+            "102": {
+              "players": {
+                "0": {
+                  "active": true,
+                  "price": 3.4,
+                  "bookmakerOutcomeId": "draw",
+                  "changedAt": "2025-10-07T10:00:00Z",
+                  "playerName": "Draw"
+                }
+              }
+            },
+            "103": {
+              "players": {
+                "0": {
+                  "active": true,
+                  "price": 2.8,
+                  "bookmakerOutcomeId": "chelsea_win",
+                  "changedAt": "2025-10-07T10:00:00Z",
+                  "playerName": "Chelsea"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "betfair": {
+      "bookmakerIsActive": true,
+      "bookmakerFixtureId": "test_123",
+      "fixturePath": "https://betfair.com",
+      "markets": {
+        "101": {
+          "bookmakerMarketId": "match_winner",
+          "outcomes": {
+            "101": {
+              "players": {
+                "0": {
+                  "active": true,
+                  "price": 2.4,
+                  "bookmakerOutcomeId": "arsenal_win_bf",
+                  "changedAt": "2025-10-07T10:00:00Z",
+                  "playerName": "Arsenal"
+                }
+              }
+            },
+            "102": {
+              "players": {
+                "0": {
+                  "active": true,
+                  "price": 3.2,
+                  "bookmakerOutcomeId": "draw_bf",
+                  "changedAt": "2025-10-07T10:00:00Z",
+                  "playerName": "Draw"
+                }
+              }
+            },
+            "103": {
+              "players": {
+                "0": {
+                  "active": true,
+                  "price": 2.6,
+                  "bookmakerOutcomeId": "chelsea_win_bf",
+                  "changedAt": "2025-10-07T10:00:00Z",
+                  "playerName": "Chelsea"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "pinnacle": {
+      "bookmakerIsActive": true,
+      "bookmakerFixtureId": "test_123", 
+      "fixturePath": "https://pinnacle.com",
+      "markets": {
+        "101": {
+          "bookmakerMarketId": "match_winner",
+          "outcomes": {
+            "101": {
+              "players": {
+                "0": {
+                  "active": true,
+                  "price": 2.3,
+                  "bookmakerOutcomeId": "arsenal_win_pin",
+                  "changedAt": "2025-10-07T10:00:00Z",
+                  "playerName": "Arsenal"
+                }
+              }
+            },
+            "102": {
+              "players": {
+                "0": {
+                  "active": true,
+                  "price": 3.6,
+                  "bookmakerOutcomeId": "draw_pin",
+                  "changedAt": "2025-10-07T10:00:00Z",
+                  "playerName": "Draw"
+                }
+              }
+            },
+            "103": {
+              "players": {
+                "0": {
+                  "active": true,
+                  "price": 2.5,
+                  "bookmakerOutcomeId": "chelsea_win_pin",
+                  "changedAt": "2025-10-07T10:00:00Z",
+                  "playerName": "Chelsea"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
