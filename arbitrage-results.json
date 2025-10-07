@@ -1,787 +1,91 @@
 {
   "fixture": {
-    "fixtureId": "id1000040663594285",
-    "participant1": "Alianza Atletico",
-    "participant2": "Universitario de Deportes",
-    "tournament": "Liga 1",
+    "fixtureId": "id1000232463448499",
+    "participant1": "FK Buducnost Podgorica",
+    "participant2": "Haverfordwest County AFC",
+    "tournament": "UEFA Youth League",
     "sport": "Soccer"
   },
   "analysis": {
-    "analyzedMarkets": 251,
-    "totalActiveBookmakers": 96,
-    "totalOpportunities": 25,
+    "analyzedMarkets": 87,
+    "totalActiveBookmakers": 19,
+    "totalOpportunities": 5,
     "opportunities": [
       {
         "market": "101",
         "outcomes": [
           {
             "outcomeId": "101",
-            "bookmaker": "bet365",
-            "odds": 6.25,
-            "impliedProbability": 0.16
+            "bookmaker": "18bet",
+            "odds": 1.3,
+            "impliedProbability": 0.7692307692307692
           },
           {
             "outcomeId": "102",
-            "bookmaker": "bet365",
-            "odds": 3.8,
-            "impliedProbability": 0.2631578947368421
-          },
-          {
-            "outcomeId": "103",
-            "bookmaker": "betonline.ag",
-            "odds": 5.2,
-            "impliedProbability": 0.1923076923076923
-          }
-        ],
-        "totalImpliedProbability": 0.6154655870445344,
-        "arbitragePercentage": 62.47862123404817,
-        "betDistribution": [
-          {
-            "outcomeId": "101",
-            "bookmaker": "bet365",
-            "betPercentage": 25.996579397447704,
-            "requiredStake": 25.996579397447704
-          },
-          {
-            "outcomeId": "102",
-            "bookmaker": "bet365",
-            "betPercentage": 42.75753190369688,
-            "requiredStake": 42.75753190369688
-          },
-          {
-            "outcomeId": "103",
-            "bookmaker": "betonline.ag",
-            "betPercentage": 31.245888698855413,
-            "requiredStake": 31.245888698855413
-          }
-        ]
-      },
-      {
-        "market": "104",
-        "outcomes": [
-          {
-            "outcomeId": "104",
-            "bookmaker": "bet365",
-            "odds": 2.25,
-            "impliedProbability": 0.4444444444444444
-          },
-          {
-            "outcomeId": "105",
-            "bookmaker": "bet365.de",
-            "odds": 1.803,
-            "impliedProbability": 0.5546311702717693
-          }
-        ],
-        "totalImpliedProbability": 0.9990756147162138,
-        "arbitragePercentage": 0.09252405625462241,
-        "betDistribution": [
-          {
-            "outcomeId": "104",
-            "bookmaker": "bet365",
-            "betPercentage": 44.48556624722427,
-            "requiredStake": 44.48556624722427
-          },
-          {
-            "outcomeId": "105",
-            "bookmaker": "bet365.de",
-            "betPercentage": 55.51443375277573,
-            "requiredStake": 55.51443375277573
-          }
-        ]
-      },
-      {
-        "market": "108",
-        "outcomes": [
-          {
-            "outcomeId": "108",
-            "bookmaker": "betfair-ex",
-            "odds": 1.44,
-            "impliedProbability": 0.6944444444444444
-          },
-          {
-            "outcomeId": "109",
-            "bookmaker": "bet365.de",
-            "odds": 3.4,
-            "impliedProbability": 0.29411764705882354
-          }
-        ],
-        "totalImpliedProbability": 0.988562091503268,
-        "arbitragePercentage": 1.1570247933884255,
-        "betDistribution": [
-          {
-            "outcomeId": "108",
-            "bookmaker": "betfair-ex",
-            "betPercentage": 70.24793388429752,
-            "requiredStake": 70.24793388429752
-          },
-          {
-            "outcomeId": "109",
-            "bookmaker": "bet365.de",
-            "betPercentage": 29.75206611570248,
-            "requiredStake": 29.75206611570248
-          }
-        ]
-      },
-      {
-        "market": "10137",
-        "outcomes": [
-          {
-            "outcomeId": "10137",
-            "bookmaker": "admiralbet.it",
-            "odds": 14.25,
-            "impliedProbability": 0.07017543859649122
-          },
-          {
-            "outcomeId": "10138",
-            "bookmaker": "admiralbet.it",
-            "odds": 5.8,
-            "impliedProbability": 0.1724137931034483
-          },
-          {
-            "outcomeId": "10139",
-            "bookmaker": "betfair-ex",
-            "odds": 3.1,
-            "impliedProbability": 0.3225806451612903
-          }
-        ],
-        "totalImpliedProbability": 0.5651698768612299,
-        "arbitragePercentage": 76.93795103760228,
-        "betDistribution": [
-          {
-            "outcomeId": "10137",
-            "bookmaker": "admiralbet.it",
-            "betPercentage": 12.41669831842823,
-            "requiredStake": 12.41669831842823
-          },
-          {
-            "outcomeId": "10138",
-            "bookmaker": "admiralbet.it",
-            "betPercentage": 30.506543282345223,
-            "requiredStake": 30.506543282345223
-          },
-          {
-            "outcomeId": "10139",
-            "bookmaker": "betfair-ex",
-            "betPercentage": 57.076758399226534,
-            "requiredStake": 57.076758399226534
-          }
-        ]
-      },
-      {
-        "market": "10140",
-        "outcomes": [
-          {
-            "outcomeId": "10140",
-            "bookmaker": "betfair-ex",
-            "odds": 19,
-            "impliedProbability": 0.05263157894736842
-          },
-          {
-            "outcomeId": "10141",
-            "bookmaker": "betfair-ex",
+            "bookmaker": "sportybet",
             "odds": 7,
             "impliedProbability": 0.14285714285714285
           },
           {
-            "outcomeId": "10142",
-            "bookmaker": "snai.it",
-            "odds": 2.85,
-            "impliedProbability": 0.3508771929824561
+            "outcomeId": "103",
+            "bookmaker": "3et",
+            "odds": 15,
+            "impliedProbability": 0.06666666666666667
           }
         ],
-        "totalImpliedProbability": 0.5463659147869674,
-        "arbitragePercentage": 83.02752293577983,
+        "totalImpliedProbability": 0.9787545787545786,
+        "arbitragePercentage": 2.170658682634746,
         "betDistribution": [
           {
-            "outcomeId": "10140",
-            "bookmaker": "betfair-ex",
-            "betPercentage": 9.63302752293578,
-            "requiredStake": 9.63302752293578
+            "outcomeId": "101",
+            "bookmaker": "18bet",
+            "betPercentage": 78.59281437125749,
+            "requiredStake": 78.59281437125749
           },
           {
-            "outcomeId": "10141",
-            "bookmaker": "betfair-ex",
-            "betPercentage": 26.146788990825687,
-            "requiredStake": 26.146788990825687
+            "outcomeId": "102",
+            "bookmaker": "sportybet",
+            "betPercentage": 14.595808383233535,
+            "requiredStake": 14.595808383233535
           },
           {
-            "outcomeId": "10142",
-            "bookmaker": "snai.it",
-            "betPercentage": 64.22018348623854,
-            "requiredStake": 64.22018348623854
+            "outcomeId": "103",
+            "bookmaker": "3et",
+            "betPercentage": 6.811377245508983,
+            "requiredStake": 6.811377245508983
           }
         ]
       },
       {
-        "market": "10240",
+        "market": "1010",
         "outcomes": [
           {
-            "outcomeId": "10240",
-            "bookmaker": "dafabet",
-            "odds": 17,
-            "impliedProbability": 0.058823529411764705
+            "outcomeId": "1010",
+            "bookmaker": "18bet",
+            "odds": 1.69,
+            "impliedProbability": 0.591715976331361
           },
           {
-            "outcomeId": "10241",
-            "bookmaker": "pokerstars.it",
-            "odds": 4.5,
-            "impliedProbability": 0.2222222222222222
-          }
-        ],
-        "totalImpliedProbability": 0.28104575163398693,
-        "arbitragePercentage": 255.8139534883721,
-        "betDistribution": [
-          {
-            "outcomeId": "10240",
-            "bookmaker": "dafabet",
-            "betPercentage": 20.930232558139533,
-            "requiredStake": 20.930232558139533
-          },
-          {
-            "outcomeId": "10241",
-            "bookmaker": "pokerstars.it",
-            "betPercentage": 79.06976744186046,
-            "requiredStake": 79.06976744186046
-          }
-        ]
-      },
-      {
-        "market": "1064",
-        "outcomes": [
-          {
-            "outcomeId": "1064",
-            "bookmaker": "betfair-ex",
-            "odds": 16.72,
-            "impliedProbability": 0.059808612440191394
-          },
-          {
-            "outcomeId": "1065",
-            "bookmaker": "betfair-ex",
-            "odds": 2.28,
-            "impliedProbability": 0.4385964912280702
-          }
-        ],
-        "totalImpliedProbability": 0.49840510366826163,
-        "arbitragePercentage": 100.63999999999997,
-        "betDistribution": [
-          {
-            "outcomeId": "1064",
-            "bookmaker": "betfair-ex",
-            "betPercentage": 12,
-            "requiredStake": 12
-          },
-          {
-            "outcomeId": "1065",
-            "bookmaker": "betfair-ex",
-            "betPercentage": 87.99999999999999,
-            "requiredStake": 87.99999999999999
-          }
-        ]
-      },
-      {
-        "market": "1066",
-        "outcomes": [
-          {
-            "outcomeId": "1066",
-            "bookmaker": "betfair-ex",
-            "odds": 8.35,
-            "impliedProbability": 0.11976047904191617
-          },
-          {
-            "outcomeId": "1067",
-            "bookmaker": "betfair-ex",
-            "odds": 1.9,
-            "impliedProbability": 0.5263157894736842
-          }
-        ],
-        "totalImpliedProbability": 0.6460762685156003,
-        "arbitragePercentage": 54.780487804878064,
-        "betDistribution": [
-          {
-            "outcomeId": "1066",
-            "bookmaker": "betfair-ex",
-            "betPercentage": 18.53658536585366,
-            "requiredStake": 18.53658536585366
-          },
-          {
-            "outcomeId": "1067",
-            "bookmaker": "betfair-ex",
-            "betPercentage": 81.46341463414635,
-            "requiredStake": 81.46341463414635
-          }
-        ]
-      },
-      {
-        "market": "1068",
-        "outcomes": [
-          {
-            "outcomeId": "1068",
-            "bookmaker": "betfair-ex",
-            "odds": 5.8,
-            "impliedProbability": 0.1724137931034483
-          },
-          {
-            "outcomeId": "1069",
-            "bookmaker": "betfair-ex",
-            "odds": 1.65,
-            "impliedProbability": 0.6060606060606061
-          }
-        ],
-        "totalImpliedProbability": 0.7784743991640544,
-        "arbitragePercentage": 28.456375838926167,
-        "betDistribution": [
-          {
-            "outcomeId": "1068",
-            "bookmaker": "betfair-ex",
-            "betPercentage": 22.14765100671141,
-            "requiredStake": 22.14765100671141
-          },
-          {
-            "outcomeId": "1069",
-            "bookmaker": "betfair-ex",
-            "betPercentage": 77.85234899328859,
-            "requiredStake": 77.85234899328859
-          }
-        ]
-      },
-      {
-        "market": "1070",
-        "outcomes": [
-          {
-            "outcomeId": "1070",
-            "bookmaker": "bet365",
-            "odds": 5.25,
-            "impliedProbability": 0.19047619047619047
-          },
-          {
-            "outcomeId": "1071",
-            "bookmaker": "betfair-ex",
-            "odds": 1.47,
-            "impliedProbability": 0.6802721088435374
-          }
-        ],
-        "totalImpliedProbability": 0.8707482993197279,
-        "arbitragePercentage": 14.843750000000005,
-        "betDistribution": [
-          {
-            "outcomeId": "1070",
-            "bookmaker": "bet365",
-            "betPercentage": 21.875,
-            "requiredStake": 21.875
-          },
-          {
-            "outcomeId": "1071",
-            "bookmaker": "betfair-ex",
-            "betPercentage": 78.125,
-            "requiredStake": 78.125
-          }
-        ]
-      },
-      {
-        "market": "10143",
-        "outcomes": [
-          {
-            "outcomeId": "10143",
+            "outcomeId": "1011",
             "bookmaker": "vave",
-            "odds": 40,
-            "impliedProbability": 0.025
-          },
-          {
-            "outcomeId": "10144",
-            "bookmaker": "betika",
-            "odds": 12,
-            "impliedProbability": 0.08333333333333333
-          },
-          {
-            "outcomeId": "10145",
-            "bookmaker": "snai.it",
-            "odds": 6.25,
-            "impliedProbability": 0.16
+            "odds": 2.55,
+            "impliedProbability": 0.3921568627450981
           }
         ],
-        "totalImpliedProbability": 0.2683333333333333,
-        "arbitragePercentage": 272.67080745341616,
+        "totalImpliedProbability": 0.9838728390764591,
+        "arbitragePercentage": 1.6391509433962188,
         "betDistribution": [
           {
-            "outcomeId": "10143",
+            "outcomeId": "1010",
+            "bookmaker": "18bet",
+            "betPercentage": 60.141509433962256,
+            "requiredStake": 60.141509433962256
+          },
+          {
+            "outcomeId": "1011",
             "bookmaker": "vave",
-            "betPercentage": 9.316770186335404,
-            "requiredStake": 9.316770186335404
-          },
-          {
-            "outcomeId": "10144",
-            "bookmaker": "betika",
-            "betPercentage": 31.055900621118017,
-            "requiredStake": 31.055900621118017
-          },
-          {
-            "outcomeId": "10145",
-            "bookmaker": "snai.it",
-            "betPercentage": 59.62732919254658,
-            "requiredStake": 59.62732919254658
-          }
-        ]
-      },
-      {
-        "market": "10314",
-        "outcomes": [
-          {
-            "outcomeId": "10314",
-            "bookmaker": "expekt.dk",
-            "odds": 2.3,
-            "impliedProbability": 0.4347826086956522
-          },
-          {
-            "outcomeId": "10315",
-            "bookmaker": "bet365",
-            "odds": 1.833,
-            "impliedProbability": 0.5455537370430987
-          }
-        ],
-        "totalImpliedProbability": 0.980336345738751,
-        "arbitragePercentage": 2.005806919912893,
-        "betDistribution": [
-          {
-            "outcomeId": "10314",
-            "bookmaker": "expekt.dk",
-            "betPercentage": 44.35035083474474,
-            "requiredStake": 44.35035083474474
-          },
-          {
-            "outcomeId": "10315",
-            "bookmaker": "bet365",
-            "betPercentage": 55.649649165255255,
-            "requiredStake": 55.649649165255255
-          }
-        ]
-      },
-      {
-        "market": "1040",
-        "outcomes": [
-          {
-            "outcomeId": "1040",
-            "bookmaker": "betfair-ex",
-            "odds": 19,
-            "impliedProbability": 0.05263157894736842
-          },
-          {
-            "outcomeId": "1041",
-            "bookmaker": "betfair-ex",
-            "odds": 6.69,
-            "impliedProbability": 0.14947683109118085
-          }
-        ],
-        "totalImpliedProbability": 0.20210841003854926,
-        "arbitragePercentage": 394.78396263137415,
-        "betDistribution": [
-          {
-            "outcomeId": "1040",
-            "bookmaker": "betfair-ex",
-            "betPercentage": 26.041261191124953,
-            "requiredStake": 26.041261191124953
-          },
-          {
-            "outcomeId": "1041",
-            "bookmaker": "betfair-ex",
-            "betPercentage": 73.95873880887504,
-            "requiredStake": 73.95873880887504
-          }
-        ]
-      },
-      {
-        "market": "1042",
-        "outcomes": [
-          {
-            "outcomeId": "1042",
-            "bookmaker": "betfair-ex",
-            "odds": 19,
-            "impliedProbability": 0.05263157894736842
-          },
-          {
-            "outcomeId": "1043",
-            "bookmaker": "betfair-ex",
-            "odds": 6.69,
-            "impliedProbability": 0.14947683109118085
-          }
-        ],
-        "totalImpliedProbability": 0.20210841003854926,
-        "arbitragePercentage": 394.78396263137415,
-        "betDistribution": [
-          {
-            "outcomeId": "1042",
-            "bookmaker": "betfair-ex",
-            "betPercentage": 26.041261191124953,
-            "requiredStake": 26.041261191124953
-          },
-          {
-            "outcomeId": "1043",
-            "bookmaker": "betfair-ex",
-            "betPercentage": 73.95873880887504,
-            "requiredStake": 73.95873880887504
-          }
-        ]
-      },
-      {
-        "market": "1044",
-        "outcomes": [
-          {
-            "outcomeId": "1044",
-            "bookmaker": "betfair-ex",
-            "odds": 19,
-            "impliedProbability": 0.05263157894736842
-          },
-          {
-            "outcomeId": "1045",
-            "bookmaker": "betfair-ex",
-            "odds": 6.69,
-            "impliedProbability": 0.14947683109118085
-          }
-        ],
-        "totalImpliedProbability": 0.20210841003854926,
-        "arbitragePercentage": 394.78396263137415,
-        "betDistribution": [
-          {
-            "outcomeId": "1044",
-            "bookmaker": "betfair-ex",
-            "betPercentage": 26.041261191124953,
-            "requiredStake": 26.041261191124953
-          },
-          {
-            "outcomeId": "1045",
-            "bookmaker": "betfair-ex",
-            "betPercentage": 73.95873880887504,
-            "requiredStake": 73.95873880887504
-          }
-        ]
-      },
-      {
-        "market": "1046",
-        "outcomes": [
-          {
-            "outcomeId": "1046",
-            "bookmaker": "betfair-ex",
-            "odds": 19,
-            "impliedProbability": 0.05263157894736842
-          },
-          {
-            "outcomeId": "1047",
-            "bookmaker": "betfair-ex",
-            "odds": 6.69,
-            "impliedProbability": 0.14947683109118085
-          }
-        ],
-        "totalImpliedProbability": 0.20210841003854926,
-        "arbitragePercentage": 394.78396263137415,
-        "betDistribution": [
-          {
-            "outcomeId": "1046",
-            "bookmaker": "betfair-ex",
-            "betPercentage": 26.041261191124953,
-            "requiredStake": 26.041261191124953
-          },
-          {
-            "outcomeId": "1047",
-            "bookmaker": "betfair-ex",
-            "betPercentage": 73.95873880887504,
-            "requiredStake": 73.95873880887504
-          }
-        ]
-      },
-      {
-        "market": "1048",
-        "outcomes": [
-          {
-            "outcomeId": "1048",
-            "bookmaker": "betfair-ex",
-            "odds": 19,
-            "impliedProbability": 0.05263157894736842
-          },
-          {
-            "outcomeId": "1049",
-            "bookmaker": "betfair-ex",
-            "odds": 6.69,
-            "impliedProbability": 0.14947683109118085
-          }
-        ],
-        "totalImpliedProbability": 0.20210841003854926,
-        "arbitragePercentage": 394.78396263137415,
-        "betDistribution": [
-          {
-            "outcomeId": "1048",
-            "bookmaker": "betfair-ex",
-            "betPercentage": 26.041261191124953,
-            "requiredStake": 26.041261191124953
-          },
-          {
-            "outcomeId": "1049",
-            "bookmaker": "betfair-ex",
-            "betPercentage": 73.95873880887504,
-            "requiredStake": 73.95873880887504
-          }
-        ]
-      },
-      {
-        "market": "1050",
-        "outcomes": [
-          {
-            "outcomeId": "1050",
-            "bookmaker": "betfair-ex",
-            "odds": 19,
-            "impliedProbability": 0.05263157894736842
-          },
-          {
-            "outcomeId": "1051",
-            "bookmaker": "betfair-ex",
-            "odds": 6.49,
-            "impliedProbability": 0.15408320493066255
-          }
-        ],
-        "totalImpliedProbability": 0.20671478387803097,
-        "arbitragePercentage": 383.7583366025893,
-        "betDistribution": [
-          {
-            "outcomeId": "1050",
-            "bookmaker": "betfair-ex",
-            "betPercentage": 25.460965084346803,
-            "requiredStake": 25.460965084346803
-          },
-          {
-            "outcomeId": "1051",
-            "bookmaker": "betfair-ex",
-            "betPercentage": 74.5390349156532,
-            "requiredStake": 74.5390349156532
-          }
-        ]
-      },
-      {
-        "market": "1052",
-        "outcomes": [
-          {
-            "outcomeId": "1052",
-            "bookmaker": "betfair-ex",
-            "odds": 19,
-            "impliedProbability": 0.05263157894736842
-          },
-          {
-            "outcomeId": "1053",
-            "bookmaker": "betfair-ex",
-            "odds": 6.19,
-            "impliedProbability": 0.16155088852988692
-          }
-        ],
-        "totalImpliedProbability": 0.21418246747725533,
-        "arbitragePercentage": 366.8916236601826,
-        "betDistribution": [
-          {
-            "outcomeId": "1052",
-            "bookmaker": "betfair-ex",
-            "betPercentage": 24.573243350535925,
-            "requiredStake": 24.573243350535925
-          },
-          {
-            "outcomeId": "1053",
-            "bookmaker": "betfair-ex",
-            "betPercentage": 75.42675664946408,
-            "requiredStake": 75.42675664946408
-          }
-        ]
-      },
-      {
-        "market": "1054",
-        "outcomes": [
-          {
-            "outcomeId": "1054",
-            "bookmaker": "betfair-ex",
-            "odds": 19,
-            "impliedProbability": 0.05263157894736842
-          },
-          {
-            "outcomeId": "1055",
-            "bookmaker": "betfair-ex",
-            "odds": 6,
-            "impliedProbability": 0.16666666666666666
-          }
-        ],
-        "totalImpliedProbability": 0.21929824561403508,
-        "arbitragePercentage": 356,
-        "betDistribution": [
-          {
-            "outcomeId": "1054",
-            "bookmaker": "betfair-ex",
-            "betPercentage": 24,
-            "requiredStake": 24
-          },
-          {
-            "outcomeId": "1055",
-            "bookmaker": "betfair-ex",
-            "betPercentage": 76,
-            "requiredStake": 76
-          }
-        ]
-      },
-      {
-        "market": "1056",
-        "outcomes": [
-          {
-            "outcomeId": "1056",
-            "bookmaker": "betfair-ex",
-            "odds": 19,
-            "impliedProbability": 0.05263157894736842
-          },
-          {
-            "outcomeId": "1057",
-            "bookmaker": "betfair-ex",
-            "odds": 5.44,
-            "impliedProbability": 0.1838235294117647
-          }
-        ],
-        "totalImpliedProbability": 0.2364551083591331,
-        "arbitragePercentage": 322.9132569558102,
-        "betDistribution": [
-          {
-            "outcomeId": "1056",
-            "bookmaker": "betfair-ex",
-            "betPercentage": 22.25859247135843,
-            "requiredStake": 22.25859247135843
-          },
-          {
-            "outcomeId": "1057",
-            "bookmaker": "betfair-ex",
-            "betPercentage": 77.74140752864157,
-            "requiredStake": 77.74140752864157
-          }
-        ]
-      },
-      {
-        "market": "1058",
-        "outcomes": [
-          {
-            "outcomeId": "1058",
-            "bookmaker": "betfair-ex",
-            "odds": 19,
-            "impliedProbability": 0.05263157894736842
-          },
-          {
-            "outcomeId": "1059",
-            "bookmaker": "betfair-ex",
-            "odds": 3.87,
-            "impliedProbability": 0.25839793281653745
-          }
-        ],
-        "totalImpliedProbability": 0.31102951176390586,
-        "arbitragePercentage": 221.51289899431572,
-        "betDistribution": [
-          {
-            "outcomeId": "1058",
-            "bookmaker": "betfair-ex",
-            "betPercentage": 16.921731526016618,
-            "requiredStake": 16.921731526016618
-          },
-          {
-            "outcomeId": "1059",
-            "bookmaker": "betfair-ex",
-            "betPercentage": 83.07826847398339,
-            "requiredStake": 83.07826847398339
+            "betPercentage": 39.85849056603774,
+            "requiredStake": 39.85849056603774
           }
         ]
       },
@@ -790,101 +94,101 @@
         "outcomes": [
           {
             "outcomeId": "1060",
-            "bookmaker": "betfair-ex",
-            "odds": 19,
-            "impliedProbability": 0.05263157894736842
+            "bookmaker": "18bet",
+            "odds": 1.84,
+            "impliedProbability": 0.5434782608695652
           },
           {
             "outcomeId": "1061",
-            "bookmaker": "betfair-ex",
-            "odds": 3.1,
-            "impliedProbability": 0.3225806451612903
+            "bookmaker": "mystake",
+            "odds": 2.36,
+            "impliedProbability": 0.42372881355932207
           }
         ],
-        "totalImpliedProbability": 0.37521222410865873,
-        "arbitragePercentage": 166.5158371040724,
+        "totalImpliedProbability": 0.9672070744288872,
+        "arbitragePercentage": 3.3904761904761958,
         "betDistribution": [
           {
             "outcomeId": "1060",
-            "bookmaker": "betfair-ex",
-            "betPercentage": 14.027149321266968,
-            "requiredStake": 14.027149321266968
+            "bookmaker": "18bet",
+            "betPercentage": 56.19047619047619,
+            "requiredStake": 56.19047619047619
           },
           {
             "outcomeId": "1061",
-            "bookmaker": "betfair-ex",
-            "betPercentage": 85.97285067873304,
-            "requiredStake": 85.97285067873304
+            "bookmaker": "mystake",
+            "betPercentage": 43.80952380952382,
+            "requiredStake": 43.80952380952382
           }
         ]
       },
       {
-        "market": "1062",
+        "market": "10242",
         "outcomes": [
           {
-            "outcomeId": "1062",
-            "bookmaker": "betfair-ex",
-            "odds": 17.86,
-            "impliedProbability": 0.055991041433370664
-          },
-          {
-            "outcomeId": "1063",
-            "bookmaker": "betfair-ex",
-            "odds": 2.69,
-            "impliedProbability": 0.3717472118959108
-          }
-        ],
-        "totalImpliedProbability": 0.4277382533292815,
-        "arbitragePercentage": 133.7878345498783,
-        "betDistribution": [
-          {
-            "outcomeId": "1062",
-            "bookmaker": "betfair-ex",
-            "betPercentage": 13.090024330900244,
-            "requiredStake": 13.090024330900244
-          },
-          {
-            "outcomeId": "1063",
-            "bookmaker": "betfair-ex",
-            "betPercentage": 86.90997566909975,
-            "requiredStake": 86.90997566909975
-          }
-        ]
-      },
-      {
-        "market": "10236",
-        "outcomes": [
-          {
-            "outcomeId": "10236",
-            "bookmaker": "dafabet",
+            "outcomeId": "10242",
+            "bookmaker": "3et",
             "odds": 6.4,
             "impliedProbability": 0.15625
           },
           {
-            "outcomeId": "10237",
+            "outcomeId": "10243",
             "bookmaker": "dafabet",
-            "odds": 2.23,
-            "impliedProbability": 0.4484304932735426
+            "odds": 2.41,
+            "impliedProbability": 0.41493775933609955
           }
         ],
-        "totalImpliedProbability": 0.6046804932735426,
-        "arbitragePercentage": 65.37659327925842,
+        "totalImpliedProbability": 0.5711877593360996,
+        "arbitragePercentage": 75.07377979568672,
         "betDistribution": [
           {
-            "outcomeId": "10236",
-            "bookmaker": "dafabet",
-            "betPercentage": 25.840092699884128,
-            "requiredStake": 25.840092699884128
+            "outcomeId": "10242",
+            "bookmaker": "3et",
+            "betPercentage": 27.355278093076052,
+            "requiredStake": 27.355278093076052
           },
           {
-            "outcomeId": "10237",
+            "outcomeId": "10243",
             "bookmaker": "dafabet",
-            "betPercentage": 74.15990730011588,
-            "requiredStake": 74.15990730011588
+            "betPercentage": 72.64472190692395,
+            "requiredStake": 72.64472190692395
+          }
+        ]
+      },
+      {
+        "market": "10244",
+        "outcomes": [
+          {
+            "outcomeId": "10244",
+            "bookmaker": "3et",
+            "odds": 28,
+            "impliedProbability": 0.03571428571428571
+          },
+          {
+            "outcomeId": "10245",
+            "bookmaker": "dafabet",
+            "odds": 2.34,
+            "impliedProbability": 0.4273504273504274
+          }
+        ],
+        "totalImpliedProbability": 0.4630647130647131,
+        "arbitragePercentage": 115.95253790375742,
+        "betDistribution": [
+          {
+            "outcomeId": "10244",
+            "bookmaker": "3et",
+            "betPercentage": 7.712590639419907,
+            "requiredStake": 7.712590639419907
+          },
+          {
+            "outcomeId": "10245",
+            "bookmaker": "dafabet",
+            "betPercentage": 92.2874093605801,
+            "requiredStake": 92.2874093605801
           }
         ]
       }
     ]
   },
-  "timestamp": "2025-09-30T21:55:20.784Z"
+  "timestamp": "2025-10-07T08:44:51.544Z"
 }
