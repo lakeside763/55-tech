@@ -61,11 +61,13 @@ pnpm start
 import { calculateArbitrage } from './index';
 
 // Fetch live odds for a specific fixture
-const result = await calculateArbitrage('id1000040663594285', true);
+const fixtureId = 'id1000040663594285';
+const verbose = false; // Show detailed logging
+const result = await calculateArbitrage(fixtureId, verbose);
 console.log(`Found ${result.analysis.totalOpportunities} opportunities`);
 ```
 
-## 📊 Example Output
+## 📊 Example Output - console
 
 ```
 ================================================================================
@@ -143,10 +145,201 @@ interface ArbitrageOpportunity {
 └── README.md            # This file
 ```
 
-### API Endpoint
-
-The library expects the API to return data in the following format:
+### Result output sample - json file(arbitrage.json)
 ```
-GET /v4/odds?fixtureId={id}&oddsFormat=decimal&verbosity=3&apiKey={key}
+{
+  "fixture": {
+    "fixtureId": "id1000232463448499",
+    "participant1": "FK Buducnost Podgorica",
+    "participant2": "Haverfordwest County AFC",
+    "tournament": "UEFA Youth League",
+    "sport": "Soccer"
+  },
+  "analysis": {
+    "analyzedMarkets": 87,
+    "totalActiveBookmakers": 19,
+    "totalOpportunities": 5,
+    "opportunities": [
+      {
+        "market": "101",
+        "outcomes": [
+          {
+            "outcomeId": "101",
+            "bookmaker": "18bet",
+            "odds": 1.3,
+            "impliedProbability": 0.7692307692307692
+          },
+          {
+            "outcomeId": "102",
+            "bookmaker": "sportybet",
+            "odds": 7,
+            "impliedProbability": 0.14285714285714285
+          },
+          {
+            "outcomeId": "103",
+            "bookmaker": "3et",
+            "odds": 15,
+            "impliedProbability": 0.06666666666666667
+          }
+        ],
+        "totalImpliedProbability": 0.9787545787545786,
+        "arbitragePercentage": 2.170658682634746,
+        "betDistribution": [
+          {
+            "outcomeId": "101",
+            "bookmaker": "18bet",
+            "betPercentage": 78.59281437125749,
+            "requiredStake": 78.59281437125749
+          },
+          {
+            "outcomeId": "102",
+            "bookmaker": "sportybet",
+            "betPercentage": 14.595808383233535,
+            "requiredStake": 14.595808383233535
+          },
+          {
+            "outcomeId": "103",
+            "bookmaker": "3et",
+            "betPercentage": 6.811377245508983,
+            "requiredStake": 6.811377245508983
+          }
+        ]
+      },
+      {
+        "market": "1010",
+        "outcomes": [
+          {
+            "outcomeId": "1010",
+            "bookmaker": "18bet",
+            "odds": 1.69,
+            "impliedProbability": 0.591715976331361
+          },
+          {
+            "outcomeId": "1011",
+            "bookmaker": "vave",
+            "odds": 2.55,
+            "impliedProbability": 0.3921568627450981
+          }
+        ],
+        "totalImpliedProbability": 0.9838728390764591,
+        "arbitragePercentage": 1.6391509433962188,
+        "betDistribution": [
+          {
+            "outcomeId": "1010",
+            "bookmaker": "18bet",
+            "betPercentage": 60.141509433962256,
+            "requiredStake": 60.141509433962256
+          },
+          {
+            "outcomeId": "1011",
+            "bookmaker": "vave",
+            "betPercentage": 39.85849056603774,
+            "requiredStake": 39.85849056603774
+          }
+        ]
+      },
+      {
+        "market": "1060",
+        "outcomes": [
+          {
+            "outcomeId": "1060",
+            "bookmaker": "18bet",
+            "odds": 1.84,
+            "impliedProbability": 0.5434782608695652
+          },
+          {
+            "outcomeId": "1061",
+            "bookmaker": "mystake",
+            "odds": 2.36,
+            "impliedProbability": 0.42372881355932207
+          }
+        ],
+        "totalImpliedProbability": 0.9672070744288872,
+        "arbitragePercentage": 3.3904761904761958,
+        "betDistribution": [
+          {
+            "outcomeId": "1060",
+            "bookmaker": "18bet",
+            "betPercentage": 56.19047619047619,
+            "requiredStake": 56.19047619047619
+          },
+          {
+            "outcomeId": "1061",
+            "bookmaker": "mystake",
+            "betPercentage": 43.80952380952382,
+            "requiredStake": 43.80952380952382
+          }
+        ]
+      },
+      {
+        "market": "10242",
+        "outcomes": [
+          {
+            "outcomeId": "10242",
+            "bookmaker": "3et",
+            "odds": 6.4,
+            "impliedProbability": 0.15625
+          },
+          {
+            "outcomeId": "10243",
+            "bookmaker": "dafabet",
+            "odds": 2.41,
+            "impliedProbability": 0.41493775933609955
+          }
+        ],
+        "totalImpliedProbability": 0.5711877593360996,
+        "arbitragePercentage": 75.07377979568672,
+        "betDistribution": [
+          {
+            "outcomeId": "10242",
+            "bookmaker": "3et",
+            "betPercentage": 27.355278093076052,
+            "requiredStake": 27.355278093076052
+          },
+          {
+            "outcomeId": "10243",
+            "bookmaker": "dafabet",
+            "betPercentage": 72.64472190692395,
+            "requiredStake": 72.64472190692395
+          }
+        ]
+      },
+      {
+        "market": "10244",
+        "outcomes": [
+          {
+            "outcomeId": "10244",
+            "bookmaker": "3et",
+            "odds": 28,
+            "impliedProbability": 0.03571428571428571
+          },
+          {
+            "outcomeId": "10245",
+            "bookmaker": "dafabet",
+            "odds": 2.34,
+            "impliedProbability": 0.4273504273504274
+          }
+        ],
+        "totalImpliedProbability": 0.4630647130647131,
+        "arbitragePercentage": 115.95253790375742,
+        "betDistribution": [
+          {
+            "outcomeId": "10244",
+            "bookmaker": "3et",
+            "betPercentage": 7.712590639419907,
+            "requiredStake": 7.712590639419907
+          },
+          {
+            "outcomeId": "10245",
+            "bookmaker": "dafabet",
+            "betPercentage": 92.2874093605801,
+            "requiredStake": 92.2874093605801
+          }
+        ]
+      }
+    ]
+  },
+  "timestamp": "2025-10-07T08:44:51.544Z"
+}
 ```
 
