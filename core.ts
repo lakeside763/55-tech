@@ -20,7 +20,7 @@ export async function loadOddsData(fixtureId?: string): Promise<OddsData> {
 
 /**
  * Fetches odds data from API for a specific fixture
- * Returns data in the same format as market-odds.json
+ * Returns data in the same format as market-data.json
  */
 async function fetchMarketOddsFromAPI(fixtureId: string): Promise<OddsData> {
   try {
@@ -57,7 +57,7 @@ async function fetchMarketOddsFromAPI(fixtureId: string): Promise<OddsData> {
  * Loads odds data from local JSON file
  */
 function loadOddsDataFromFile(): OddsData {
-  const fileName = 'market-odds.json';
+  const fileName = 'market-data.json';
   
   try {
     const rawData = fs.readFileSync(fileName, 'utf-8');

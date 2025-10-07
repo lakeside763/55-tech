@@ -9,7 +9,7 @@ export async function calculateArbitrage(fixtureId?: string, verbose: boolean = 
     const oddsData = await loadOddsData(fixtureId);
     
     if (verbose) {
-      console.log(`Data source: ${fixtureId ? `API (fixture: ${fixtureId})` : 'Local file (market-odds.json)'}`);
+      console.log(`Data source: ${fixtureId ? `API (fixture: ${fixtureId})` : 'Local file (market-data.json)'}`);
       console.log(`Analyzing fixture: ${oddsData.participant1Name} vs ${oddsData.participant2Name}`);
       console.log(`Tournament: ${oddsData.tournamentName} (${oddsData.sportName})`);
     }
