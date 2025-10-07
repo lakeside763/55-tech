@@ -145,7 +145,7 @@ interface ArbitrageOpportunity {
 └── README.md            # This file
 ```
 
-### Result output sample - json file(arbitrage.json)
+### Result output sample - json file(arbitrage-results.json)
 ```
 {
   "fixture": {
