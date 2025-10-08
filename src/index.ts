@@ -82,7 +82,11 @@ if (require.main === module) {
       // Export to JSON
       exportToJson(result);
       
-      console.log(`Markets analyzed: ${result.analysis.analyzedMarkets}, Active bookmakers: ${result.analysis.totalActiveBookmakers}, Opportunities found: ${result.analysis.totalOpportunities}`);
+      console.log(`
+        Markets analyzed: ${result.analysis.analyzedMarkets}, 
+        Active bookmakers: ${result.analysis.totalActiveBookmakers}, 
+        Opportunities found: ${result.analysis.totalOpportunities}
+      `);
         
     } catch (error) {
       const errorMessage = error instanceof Error ? error.message : String(error);
