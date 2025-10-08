@@ -39,7 +39,7 @@ export function displayResults(result: ArbitrageAnalysisResult): void {
 /**
  * Exports results to JSON file
  */
-export function exportToJson(result: ArbitrageAnalysisResult, fileName: string = 'arbitrage-results.json'): void {
+export function exportToJson(result: ArbitrageAnalysisResult, fileName: string = './src/arbitrage-results.json'): void {
   try {
     fs.writeFileSync(fileName, JSON.stringify(result, null, 2));
     console.log(`Results exported to ${fileName}`);

@@ -73,8 +73,8 @@ if (require.main === module) {
       // Default to local file loading to avoid API issues
 
       // To test API loading, uncomment the line below:
-      // const fixtureId = 'id1000232463448499'; // and pass fixtureId to calculateArbitrage
-      const result = await calculateArbitrage(undefined, false);
+      const fixtureId = 'id1000232463448499'; // and pass fixtureId to calculateArbitrage
+      const result = await calculateArbitrage(fixtureId, false);
 
       // Display formatted results
       displayResults(result);

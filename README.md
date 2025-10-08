@@ -134,16 +134,17 @@ interface ArbitrageOpportunity {
 ```
 
 ## 📁 Project Structure
-
 ```
-├── core.ts                   # Core arbitrage analysis logic
-├── index.ts                  # Main entry point and calculation function
-├── types.ts                  # TypeScript type definitions
-├── utils.ts                  # Utility functions for display and export
-├── arbitrage-results.json    # Results from calculate arbitrage
-├── market-data.json          # Sample odds data file
-├── .env.example              # Environment variables template
-└── README.md                 # This file
+src/
+  ├── core.ts                   # Core arbitrage analysis logic
+  ├── index.ts                  # Main entry point and calculation function
+  ├── types.ts                  # TypeScript type definitions
+  ├── utils.ts                  # Utility functions for display and export
+  ├── arbitrage-results.json    # Results from calculate arbitrage
+  ├── market-data.json          # Sample odds data file
+  ├── .env.example              # Environment variables template
+  └── README.md                 # This file
+test/
 ```
 
 ### Result output sample - json file(market-arbitrage-results.json)
