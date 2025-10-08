@@ -53,7 +53,7 @@ This library analyzes odds data from multiple bookmakers to identify arbitrage o
 #### Analyze Local Data
 ```bash
 pnpm start
-# Analyzes data from market-odds.json
+# Analyzes data from market-data.json
 ```
 
 #### Fetch Live Data from API
@@ -136,13 +136,14 @@ interface ArbitrageOpportunity {
 ## 📁 Project Structure
 
 ```
-├── core.ts              # Core arbitrage analysis logic
-├── index.ts             # Main entry point and calculation function
-├── types.ts             # TypeScript type definitions
-├── utils.ts             # Utility functions for display and export
-├── market-odds.json     # Sample odds data file
-├── .env.example         # Environment variables template
-└── README.md            # This file
+├── core.ts                   # Core arbitrage analysis logic
+├── index.ts                  # Main entry point and calculation function
+├── types.ts                  # TypeScript type definitions
+├── utils.ts                  # Utility functions for display and export
+├── arbitrage-results.json    # Results from calculate arbitrage
+├── market-data.json          # Sample odds data file
+├── .env.example              # Environment variables template
+└── README.md                 # This file
 ```
 
 ### Result output sample - json file(market-arbitrage-results.json)

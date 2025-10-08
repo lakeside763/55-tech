@@ -14,6 +14,10 @@ export async function calculateArbitrage(fixtureId?: string, verbose: boolean = 
       console.log(`Tournament: ${oddsData.tournamentName} (${oddsData.sportName})`);
     }
 
+    if (!oddsData.bookmakerOdds || Object.keys(oddsData.bookmakerOdds).length === 0) {
+      throw new Error('No bookmaker odds data available. The fixture may have finished or not started yet.');
+    }
+
     // Get active bookmakers
     const activeBookmakers = getActiveBookmakers(oddsData);
     
@@ -69,7 +73,7 @@ if (require.main === module) {
       // Default to local file loading to avoid API issues
 
       // To test API loading, uncomment the line below:
-      // const fixtureId = 'id1000040663594285'; // and pass fixtureId to calculateArbitrage
+      // const fixtureId = 'id1000232463448499'; // and pass fixtureId to calculateArbitrage
       const result = await calculateArbitrage(undefined, false);
 
       // Display formatted results

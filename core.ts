@@ -57,7 +57,7 @@ async function fetchMarketOddsFromAPI(fixtureId: string): Promise<OddsData> {
  * Loads odds data from local JSON file
  */
 function loadOddsDataFromFile(): OddsData {
-  const fileName = 'market-odds-data.json';
+  const fileName = 'market-data.json';
   
   try {
     const rawData = fs.readFileSync(fileName, 'utf-8');
