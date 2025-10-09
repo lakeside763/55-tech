@@ -32,27 +32,33 @@ export async function calculateArbitrage(
     // Get all available markets
     const allMarkets = getAllMarkets(oddsData, activeBookmakers);
     
+    // For API data, limit markets to prevent memory issues
+    const marketsToAnalyze = Array.from(allMarkets).slice(0, fixtureId ? 10 : allMarkets.size);
+    
     if (verbose) {
       console.log(`Available markets: ${Array.from(allMarkets).join(', ')}`);
+      if (fixtureId && allMarkets.size > 10) {
+        console.log(`Limiting analysis to first ${marketsToAnalyze.length} markets for memory efficiency`);
+      }
     }
 
     // Analyze each market for arbitrage opportunities
     const arbitrageOpportunities: ArbitrageOpportunity[] = [];
 
     if (topk && topk > 1) {
-      allMarkets.forEach(marketId => {
+      marketsToAnalyze.forEach(marketId => {
         const opportunity = analyzeMarketTopK(marketId, oddsData, activeBookmakers, {
-          topk: topk || 3,
-          verbose: true,
+          topk,
+          verbose,
           includeBetDistribution: true,
-          maxResults: 20,
+          maxResults: 20, // limit opportunities per market for memory efficiency
         });
         if (opportunity.length > 0) {
           arbitrageOpportunities.push(...opportunity);
         }
       });
     } else {
-      allMarkets.forEach(marketId => {
+      marketsToAnalyze.forEach(marketId => {
         const opportunity = analyzeMarket(marketId, oddsData, activeBookmakers, verbose);
         if (opportunity) {
           arbitrageOpportunities.push(opportunity);
@@ -70,7 +76,7 @@ export async function calculateArbitrage(
         sport: oddsData.sportName
       },
       analysis: {
-        analyzedMarkets: allMarkets.size,
+        analyzedMarkets: marketsToAnalyze.length,
         totalActiveBookmakers: activeBookmakers.length,
         totalOpportunities: arbitrageOpportunities.length,
         opportunities: arbitrageOpportunities
@@ -90,9 +96,11 @@ if (require.main === module) {
       // Default to local file loading to avoid API issues
 
       // To test API loading, uncomment the line below:
-      const fixtureId = undefined; // and pass fixtureId to calculateArbitrage - id1000232463448499
-      const topk = 3; // Set desired top-K value or null for standard analysis
-      const result = await calculateArbitrage(fixtureId, topk, false);
+      const fixtureId = 'id1000069161840496'; // and pass fixtureId to calculateArbitrage - id1000069161840496
+      const topk = 3; // Reduced from 3 to 2 for API data to prevent memory issues
+      const verbose = true; // Enable verbose logging to monitor memory usage
+
+      const result = await calculateArbitrage(fixtureId, topk, verbose);
 
       // Display formatted results
       displayResults(result);

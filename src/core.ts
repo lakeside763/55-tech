@@ -268,7 +268,7 @@ export function analyzeMarket(
 /**
  * 1 Collects odds per outcome across bookmakers and limits to Top-K.
  */
-export function buildOutcomeOddsMap(
+export function buildTopOutcomeOddsMap(
   marketId: string,
   oddsData: OddsData,
   activeBookmakers: string[],
@@ -378,14 +378,14 @@ export function analyzeMarketTopK(
 ): ArbitrageOpportunity[] {
   let { topk, maxResults, verbose, includeBetDistribution } = options;
 
-  topk = Math.min(Math.max(topk || 3, 1), 10); // Clamp between 1 and 10
-  maxResults = Math.min(Math.max(maxResults || 5, 1), 20); // Clamp between 1 and 20
+  topk = Math.min(Math.max(topk || 3, 1), 3); // Clamp between 1 and 3
+  maxResults = Math.min(Math.max(maxResults || 5, 1), 5); // Clamp between 1 and 5
 
   if (verbose) {
     console.log(`Building outcome odds map for market ${marketId}...`);
   }
 
-  const outcomeOdds = buildOutcomeOddsMap(marketId, oddsData, activeBookmakers, topk);
+  const outcomeOdds = buildTopOutcomeOddsMap(marketId, oddsData, activeBookmakers, topk);
   const outcomeIds = Object.keys(outcomeOdds);
 
   if (verbose) {

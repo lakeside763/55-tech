@@ -1,58 +1,91 @@
 {
   "fixture": {
-    "fixtureId": "id1000232463448499",
-    "participant1": "FK Buducnost Podgorica",
-    "participant2": "Haverfordwest County AFC",
-    "tournament": "UEFA Youth League",
+    "fixtureId": "id1000069161840496",
+    "participant1": "FC Chernomorets Odessa",
+    "participant2": "FC Viktoriya Sumy",
+    "tournament": "Persha Liga",
     "sport": "Soccer"
   },
   "analysis": {
-    "analyzedMarkets": 87,
-    "totalActiveBookmakers": 19,
-    "totalOpportunities": 5,
+    "analyzedMarkets": 152,
+    "totalActiveBookmakers": 81,
+    "totalOpportunities": 20,
     "opportunities": [
       {
         "market": "101",
         "outcomes": [
           {
             "outcomeId": "101",
-            "bookmaker": "18bet",
-            "odds": 1.3,
-            "impliedProbability": 0.7692
+            "bookmaker": "pokerstars",
+            "odds": 13,
+            "impliedProbability": 0.0769
           },
           {
             "outcomeId": "102",
-            "bookmaker": "sportybet",
-            "odds": 7,
-            "impliedProbability": 0.1429
+            "bookmaker": "duelbits",
+            "odds": 3.7,
+            "impliedProbability": 0.2703
           },
           {
             "outcomeId": "103",
-            "bookmaker": "3et",
-            "odds": 15,
-            "impliedProbability": 0.0667
+            "bookmaker": "pokerstars",
+            "odds": 23,
+            "impliedProbability": 0.0435
           }
         ],
-        "totalImpliedProbability": 0.9788,
-        "arbitragePercentage": 2.17,
+        "totalImpliedProbability": 0.3907,
+        "arbitragePercentage": 155.95,
         "betDistribution": [
           {
             "outcomeId": "101",
-            "bookmaker": "18bet",
-            "betPercentage": 78.59,
-            "requiredStake": 78.59
+            "bookmaker": "pokerstars",
+            "betPercentage": 19.68,
+            "requiredStake": 19.68
           },
           {
             "outcomeId": "102",
-            "bookmaker": "sportybet",
-            "betPercentage": 14.6,
-            "requiredStake": 14.6
+            "bookmaker": "duelbits",
+            "betPercentage": 69.18,
+            "requiredStake": 69.18
           },
           {
             "outcomeId": "103",
-            "bookmaker": "3et",
-            "betPercentage": 6.81,
-            "requiredStake": 6.81
+            "bookmaker": "pokerstars",
+            "betPercentage": 11.13,
+            "requiredStake": 11.13
+          }
+        ]
+      },
+      {
+        "market": "104",
+        "outcomes": [
+          {
+            "outcomeId": "104",
+            "bookmaker": "bwin",
+            "odds": 101,
+            "impliedProbability": 0.0099
+          },
+          {
+            "outcomeId": "105",
+            "bookmaker": "inbetsport",
+            "odds": 2,
+            "impliedProbability": 0.5
+          }
+        ],
+        "totalImpliedProbability": 0.5099,
+        "arbitragePercentage": 96.12,
+        "betDistribution": [
+          {
+            "outcomeId": "104",
+            "bookmaker": "bwin",
+            "betPercentage": 1.94,
+            "requiredStake": 1.94
+          },
+          {
+            "outcomeId": "105",
+            "bookmaker": "inbetsport",
+            "betPercentage": 98.06,
+            "requiredStake": 98.06
           }
         ]
       },
@@ -61,134 +94,656 @@
         "outcomes": [
           {
             "outcomeId": "1010",
-            "bookmaker": "18bet",
-            "odds": 1.69,
-            "impliedProbability": 0.5917
+            "bookmaker": "borgata",
+            "odds": 176,
+            "impliedProbability": 0.0057
           },
           {
             "outcomeId": "1011",
-            "bookmaker": "vave",
-            "odds": 2.55,
-            "impliedProbability": 0.3922
+            "bookmaker": "williamhill",
+            "odds": 1.8,
+            "impliedProbability": 0.5556
           }
         ],
-        "totalImpliedProbability": 0.9839,
-        "arbitragePercentage": 1.64,
+        "totalImpliedProbability": 0.5613,
+        "arbitragePercentage": 78.16,
         "betDistribution": [
           {
             "outcomeId": "1010",
-            "bookmaker": "18bet",
-            "betPercentage": 60.14,
-            "requiredStake": 60.14
+            "bookmaker": "borgata",
+            "betPercentage": 1.02,
+            "requiredStake": 1.02
           },
           {
             "outcomeId": "1011",
-            "bookmaker": "vave",
-            "betPercentage": 39.86,
-            "requiredStake": 39.86
+            "bookmaker": "williamhill",
+            "betPercentage": 98.98,
+            "requiredStake": 98.98
           }
         ]
       },
       {
-        "market": "1060",
+        "market": "1066",
         "outcomes": [
           {
-            "outcomeId": "1060",
-            "bookmaker": "18bet",
-            "odds": 1.84,
-            "impliedProbability": 0.5435
+            "outcomeId": "1066",
+            "bookmaker": "188bet",
+            "odds": 2.05,
+            "impliedProbability": 0.4878
           },
           {
-            "outcomeId": "1061",
-            "bookmaker": "mystake",
-            "odds": 2.36,
-            "impliedProbability": 0.4237
+            "outcomeId": "1067",
+            "bookmaker": "3et",
+            "odds": 2,
+            "impliedProbability": 0.5
           }
         ],
-        "totalImpliedProbability": 0.9672,
-        "arbitragePercentage": 3.39,
+        "totalImpliedProbability": 0.9878,
+        "arbitragePercentage": 1.24,
         "betDistribution": [
           {
-            "outcomeId": "1060",
-            "bookmaker": "18bet",
-            "betPercentage": 56.19,
-            "requiredStake": 56.19
+            "outcomeId": "1066",
+            "bookmaker": "188bet",
+            "betPercentage": 49.38,
+            "requiredStake": 49.38
           },
           {
-            "outcomeId": "1061",
-            "bookmaker": "mystake",
-            "betPercentage": 43.81,
-            "requiredStake": 43.81
+            "outcomeId": "1067",
+            "bookmaker": "3et",
+            "betPercentage": 50.62,
+            "requiredStake": 50.62
           }
         ]
       },
       {
-        "market": "10242",
+        "market": "1068",
         "outcomes": [
           {
-            "outcomeId": "10242",
-            "bookmaker": "3et",
-            "odds": 6.4,
-            "impliedProbability": 0.1563
+            "outcomeId": "1068",
+            "bookmaker": "netbet",
+            "odds": 4.9,
+            "impliedProbability": 0.2041
           },
           {
-            "outcomeId": "10243",
-            "bookmaker": "dafabet",
-            "odds": 2.41,
-            "impliedProbability": 0.4149
+            "outcomeId": "1069",
+            "bookmaker": "3et",
+            "odds": 2.3,
+            "impliedProbability": 0.4348
           }
         ],
-        "totalImpliedProbability": 0.5712,
-        "arbitragePercentage": 75.07,
+        "totalImpliedProbability": 0.6389,
+        "arbitragePercentage": 56.52,
         "betDistribution": [
           {
-            "outcomeId": "10242",
-            "bookmaker": "3et",
-            "betPercentage": 27.36,
-            "requiredStake": 27.36
+            "outcomeId": "1068",
+            "bookmaker": "netbet",
+            "betPercentage": 31.95,
+            "requiredStake": 31.95
           },
           {
-            "outcomeId": "10243",
-            "bookmaker": "dafabet",
-            "betPercentage": 72.64,
-            "requiredStake": 72.64
+            "outcomeId": "1069",
+            "bookmaker": "3et",
+            "betPercentage": 68.05,
+            "requiredStake": 68.05
           }
         ]
       },
       {
-        "market": "10244",
+        "market": "10214",
         "outcomes": [
           {
-            "outcomeId": "10244",
-            "bookmaker": "3et",
-            "odds": 28,
-            "impliedProbability": 0.0357
+            "outcomeId": "10214",
+            "bookmaker": "sesamesport.bg",
+            "odds": 1.44,
+            "impliedProbability": 0.6944
           },
           {
-            "outcomeId": "10245",
-            "bookmaker": "dafabet",
-            "odds": 2.34,
-            "impliedProbability": 0.4274
+            "outcomeId": "10215",
+            "bookmaker": "betano",
+            "odds": 4.55,
+            "impliedProbability": 0.2198
           }
         ],
-        "totalImpliedProbability": 0.4631,
-        "arbitragePercentage": 115.94,
+        "totalImpliedProbability": 0.9142,
+        "arbitragePercentage": 9.39,
         "betDistribution": [
           {
-            "outcomeId": "10244",
-            "bookmaker": "3et",
-            "betPercentage": 7.71,
-            "requiredStake": 7.71
+            "outcomeId": "10214",
+            "bookmaker": "sesamesport.bg",
+            "betPercentage": 75.96,
+            "requiredStake": 75.96
           },
           {
-            "outcomeId": "10245",
-            "bookmaker": "dafabet",
-            "betPercentage": 92.29,
-            "requiredStake": 92.29
+            "outcomeId": "10215",
+            "bookmaker": "betano",
+            "betPercentage": 24.04,
+            "requiredStake": 24.04
+          }
+        ]
+      },
+      {
+        "market": "10222",
+        "outcomes": [
+          {
+            "outcomeId": "10222",
+            "bookmaker": "netbet",
+            "odds": 3.9,
+            "impliedProbability": 0.2564
+          },
+          {
+            "outcomeId": "10223",
+            "bookmaker": "duelbits",
+            "odds": 1.85,
+            "impliedProbability": 0.5405
+          }
+        ],
+        "totalImpliedProbability": 0.7969,
+        "arbitragePercentage": 25.49,
+        "betDistribution": [
+          {
+            "outcomeId": "10222",
+            "bookmaker": "netbet",
+            "betPercentage": 32.17,
+            "requiredStake": 32.17
+          },
+          {
+            "outcomeId": "10223",
+            "bookmaker": "duelbits",
+            "betPercentage": 67.83,
+            "requiredStake": 67.83
+          }
+        ]
+      },
+      {
+        "market": "10224",
+        "outcomes": [
+          {
+            "outcomeId": "10224",
+            "bookmaker": "betway",
+            "odds": 4,
+            "impliedProbability": 0.25
+          },
+          {
+            "outcomeId": "10225",
+            "bookmaker": "snai.it",
+            "odds": 4.6,
+            "impliedProbability": 0.2174
+          }
+        ],
+        "totalImpliedProbability": 0.4674,
+        "arbitragePercentage": 113.95,
+        "betDistribution": [
+          {
+            "outcomeId": "10224",
+            "bookmaker": "betway",
+            "betPercentage": 53.49,
+            "requiredStake": 53.49
+          },
+          {
+            "outcomeId": "10225",
+            "bookmaker": "snai.it",
+            "betPercentage": 46.51,
+            "requiredStake": 46.51
+          }
+        ]
+      },
+      {
+        "market": "10240",
+        "outcomes": [
+          {
+            "outcomeId": "10240",
+            "bookmaker": "betway",
+            "odds": 6.5,
+            "impliedProbability": 0.1538
+          },
+          {
+            "outcomeId": "10241",
+            "bookmaker": "betika",
+            "odds": 1.98,
+            "impliedProbability": 0.5051
+          }
+        ],
+        "totalImpliedProbability": 0.6589,
+        "arbitragePercentage": 51.77,
+        "betDistribution": [
+          {
+            "outcomeId": "10240",
+            "bookmaker": "betway",
+            "betPercentage": 23.34,
+            "requiredStake": 23.34
+          },
+          {
+            "outcomeId": "10241",
+            "bookmaker": "betika",
+            "betPercentage": 76.66,
+            "requiredStake": 76.66
+          }
+        ]
+      },
+      {
+        "market": "10302",
+        "outcomes": [
+          {
+            "outcomeId": "10302",
+            "bookmaker": "bwin",
+            "odds": 101,
+            "impliedProbability": 0.0099
+          },
+          {
+            "outcomeId": "10303",
+            "bookmaker": "3et",
+            "odds": 1.2,
+            "impliedProbability": 0.8333
+          }
+        ],
+        "totalImpliedProbability": 0.8432,
+        "arbitragePercentage": 18.6,
+        "betDistribution": [
+          {
+            "outcomeId": "10302",
+            "bookmaker": "bwin",
+            "betPercentage": 1.17,
+            "requiredStake": 1.17
+          },
+          {
+            "outcomeId": "10303",
+            "bookmaker": "3et",
+            "betPercentage": 98.83,
+            "requiredStake": 98.83
+          }
+        ]
+      },
+      {
+        "market": "108",
+        "outcomes": [
+          {
+            "outcomeId": "108",
+            "bookmaker": "bwin",
+            "odds": 71,
+            "impliedProbability": 0.0141
+          },
+          {
+            "outcomeId": "109",
+            "bookmaker": "paf",
+            "odds": 3.1,
+            "impliedProbability": 0.3226
+          }
+        ],
+        "totalImpliedProbability": 0.3367,
+        "arbitragePercentage": 197,
+        "betDistribution": [
+          {
+            "outcomeId": "108",
+            "bookmaker": "bwin",
+            "betPercentage": 4.19,
+            "requiredStake": 4.19
+          },
+          {
+            "outcomeId": "109",
+            "bookmaker": "paf",
+            "betPercentage": 95.81,
+            "requiredStake": 95.81
+          }
+        ]
+      },
+      {
+        "market": "1012",
+        "outcomes": [
+          {
+            "outcomeId": "1012",
+            "bookmaker": "oddset",
+            "odds": 151,
+            "impliedProbability": 0.0066
+          },
+          {
+            "outcomeId": "1013",
+            "bookmaker": "paf",
+            "odds": 1.26,
+            "impliedProbability": 0.7937
+          }
+        ],
+        "totalImpliedProbability": 0.8003,
+        "arbitragePercentage": 24.95,
+        "betDistribution": [
+          {
+            "outcomeId": "1012",
+            "bookmaker": "oddset",
+            "betPercentage": 0.82,
+            "requiredStake": 0.82
+          },
+          {
+            "outcomeId": "1013",
+            "bookmaker": "paf",
+            "betPercentage": 99.18,
+            "requiredStake": 99.18
+          }
+        ]
+      },
+      {
+        "market": "1014",
+        "outcomes": [
+          {
+            "outcomeId": "1014",
+            "bookmaker": "partypoker",
+            "odds": 201,
+            "impliedProbability": 0.005
+          },
+          {
+            "outcomeId": "1015",
+            "bookmaker": "paf",
+            "odds": 1.08,
+            "impliedProbability": 0.9259
+          }
+        ],
+        "totalImpliedProbability": 0.9309,
+        "arbitragePercentage": 7.42,
+        "betDistribution": [
+          {
+            "outcomeId": "1014",
+            "bookmaker": "partypoker",
+            "betPercentage": 0.54,
+            "requiredStake": 0.54
+          },
+          {
+            "outcomeId": "1015",
+            "bookmaker": "paf",
+            "betPercentage": 99.46,
+            "requiredStake": 99.46
+          }
+        ]
+      },
+      {
+        "market": "10208",
+        "outcomes": [
+          {
+            "outcomeId": "10208",
+            "bookmaker": "inbetsport",
+            "odds": 2.53,
+            "impliedProbability": 0.3953
+          },
+          {
+            "outcomeId": "10209",
+            "bookmaker": "snai.it",
+            "odds": 2.35,
+            "impliedProbability": 0.4255
+          },
+          {
+            "outcomeId": "10210",
+            "bookmaker": "betano",
+            "odds": 6.7,
+            "impliedProbability": 0.1493
+          }
+        ],
+        "totalImpliedProbability": 0.9701,
+        "arbitragePercentage": 3.08,
+        "betDistribution": [
+          {
+            "outcomeId": "10208",
+            "bookmaker": "inbetsport",
+            "betPercentage": 40.75,
+            "requiredStake": 40.75
+          },
+          {
+            "outcomeId": "10209",
+            "bookmaker": "snai.it",
+            "betPercentage": 43.86,
+            "requiredStake": 43.86
+          },
+          {
+            "outcomeId": "10210",
+            "bookmaker": "betano",
+            "betPercentage": 15.39,
+            "requiredStake": 15.39
+          }
+        ]
+      },
+      {
+        "market": "10216",
+        "outcomes": [
+          {
+            "outcomeId": "10216",
+            "bookmaker": "ladbrokes",
+            "odds": 5.5,
+            "impliedProbability": 0.1818
+          },
+          {
+            "outcomeId": "10217",
+            "bookmaker": "paf",
+            "odds": 10,
+            "impliedProbability": 0.1
+          },
+          {
+            "outcomeId": "10218",
+            "bookmaker": "ladbrokes",
+            "odds": 8.5,
+            "impliedProbability": 0.1176
+          }
+        ],
+        "totalImpliedProbability": 0.3994,
+        "arbitragePercentage": 150.38,
+        "betDistribution": [
+          {
+            "outcomeId": "10216",
+            "bookmaker": "ladbrokes",
+            "betPercentage": 45.52,
+            "requiredStake": 45.52
+          },
+          {
+            "outcomeId": "10217",
+            "bookmaker": "paf",
+            "betPercentage": 25.04,
+            "requiredStake": 25.04
+          },
+          {
+            "outcomeId": "10218",
+            "bookmaker": "ladbrokes",
+            "betPercentage": 29.44,
+            "requiredStake": 29.44
+          }
+        ]
+      },
+      {
+        "market": "106",
+        "outcomes": [
+          {
+            "outcomeId": "106",
+            "bookmaker": "pokerstars",
+            "odds": 9,
+            "impliedProbability": 0.1111
+          },
+          {
+            "outcomeId": "107",
+            "bookmaker": "sisal.it",
+            "odds": 9,
+            "impliedProbability": 0.1111
+          }
+        ],
+        "totalImpliedProbability": 0.2222,
+        "arbitragePercentage": 350.05,
+        "betDistribution": [
+          {
+            "outcomeId": "106",
+            "bookmaker": "pokerstars",
+            "betPercentage": 50,
+            "requiredStake": 50
+          },
+          {
+            "outcomeId": "107",
+            "bookmaker": "sisal.it",
+            "betPercentage": 50,
+            "requiredStake": 50
+          }
+        ]
+      },
+      {
+        "market": "10211",
+        "outcomes": [
+          {
+            "outcomeId": "10211",
+            "bookmaker": "bwin.it",
+            "odds": 7.5,
+            "impliedProbability": 0.1333
+          },
+          {
+            "outcomeId": "10212",
+            "bookmaker": "betano",
+            "odds": 2.42,
+            "impliedProbability": 0.4132
+          },
+          {
+            "outcomeId": "10213",
+            "bookmaker": "bwin.it",
+            "odds": 12,
+            "impliedProbability": 0.0833
+          }
+        ],
+        "totalImpliedProbability": 0.6298,
+        "arbitragePercentage": 58.78,
+        "betDistribution": [
+          {
+            "outcomeId": "10211",
+            "bookmaker": "bwin.it",
+            "betPercentage": 21.17,
+            "requiredStake": 21.17
+          },
+          {
+            "outcomeId": "10212",
+            "bookmaker": "betano",
+            "betPercentage": 65.61,
+            "requiredStake": 65.61
+          },
+          {
+            "outcomeId": "10213",
+            "bookmaker": "bwin.it",
+            "betPercentage": 13.23,
+            "requiredStake": 13.23
+          }
+        ]
+      },
+      {
+        "market": "10137",
+        "outcomes": [
+          {
+            "outcomeId": "10137",
+            "bookmaker": "snai.it",
+            "odds": 2.9,
+            "impliedProbability": 0.3448
+          },
+          {
+            "outcomeId": "10138",
+            "bookmaker": "tipico",
+            "odds": 8,
+            "impliedProbability": 0.125
+          },
+          {
+            "outcomeId": "10139",
+            "bookmaker": "tipico",
+            "odds": 20,
+            "impliedProbability": 0.05
+          }
+        ],
+        "totalImpliedProbability": 0.5198,
+        "arbitragePercentage": 92.38,
+        "betDistribution": [
+          {
+            "outcomeId": "10137",
+            "bookmaker": "snai.it",
+            "betPercentage": 66.33,
+            "requiredStake": 66.33
+          },
+          {
+            "outcomeId": "10138",
+            "bookmaker": "tipico",
+            "betPercentage": 24.05,
+            "requiredStake": 24.05
+          },
+          {
+            "outcomeId": "10139",
+            "bookmaker": "tipico",
+            "betPercentage": 9.62,
+            "requiredStake": 9.62
+          }
+        ]
+      },
+      {
+        "market": "10140",
+        "outcomes": [
+          {
+            "outcomeId": "10140",
+            "bookmaker": "ladbrokes",
+            "odds": 26,
+            "impliedProbability": 0.0385
+          },
+          {
+            "outcomeId": "10141",
+            "bookmaker": "tipico",
+            "odds": 8.5,
+            "impliedProbability": 0.1176
+          },
+          {
+            "outcomeId": "10142",
+            "bookmaker": "betano",
+            "odds": 2.37,
+            "impliedProbability": 0.4219
+          }
+        ],
+        "totalImpliedProbability": 0.578,
+        "arbitragePercentage": 73.01,
+        "betDistribution": [
+          {
+            "outcomeId": "10140",
+            "bookmaker": "ladbrokes",
+            "betPercentage": 6.66,
+            "requiredStake": 6.66
+          },
+          {
+            "outcomeId": "10141",
+            "bookmaker": "tipico",
+            "betPercentage": 20.35,
+            "requiredStake": 20.35
+          },
+          {
+            "outcomeId": "10142",
+            "bookmaker": "betano",
+            "betPercentage": 72.99,
+            "requiredStake": 72.99
+          }
+        ]
+      },
+      {
+        "market": "10322",
+        "outcomes": [
+          {
+            "outcomeId": "10322",
+            "bookmaker": "inbetsport",
+            "odds": 1.49,
+            "impliedProbability": 0.6711
+          },
+          {
+            "outcomeId": "10323",
+            "bookmaker": "snai.it",
+            "odds": 3.4,
+            "impliedProbability": 0.2941
+          }
+        ],
+        "totalImpliedProbability": 0.9652,
+        "arbitragePercentage": 3.61,
+        "betDistribution": [
+          {
+            "outcomeId": "10322",
+            "bookmaker": "inbetsport",
+            "betPercentage": 69.53,
+            "requiredStake": 69.53
+          },
+          {
+            "outcomeId": "10323",
+            "bookmaker": "snai.it",
+            "betPercentage": 30.47,
+            "requiredStake": 30.47
           }
         ]
       }
     ]
   },
-  "timestamp": "2025-10-09T15:11:44.914Z"
+  "timestamp": "2025-10-09T16:02:07.253Z"
 }
