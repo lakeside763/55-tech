@@ -1,9 +1,13 @@
 import 'dotenv/config';
-import { analyzeMarket, getActiveBookmakers, getAllMarkets, loadOddsData } from "./core";
+import { analyzeMarket, analyzeMarketTopK, getActiveBookmakers, getAllMarkets, loadOddsData } from "./core";
 import { ArbitrageAnalysisResult, ArbitrageOpportunity } from "./types";
 import { displayResults, exportToJson } from "./utils";
 
-export async function calculateArbitrage(fixtureId?: string, verbose: boolean = false): Promise<ArbitrageAnalysisResult> {
+export async function calculateArbitrage(
+  fixtureId?: string, 
+  topk?: number, 
+  verbose: boolean = false
+): Promise<ArbitrageAnalysisResult> {
   try {
     // Load odds data (from API if fixtureId provided, otherwise from file)
     const oddsData = await loadOddsData(fixtureId);
@@ -35,12 +39,26 @@ export async function calculateArbitrage(fixtureId?: string, verbose: boolean = 
     // Analyze each market for arbitrage opportunities
     const arbitrageOpportunities: ArbitrageOpportunity[] = [];
 
-    allMarkets.forEach(marketId => {
-      const opportunity = analyzeMarket(marketId, oddsData, activeBookmakers, verbose);
-      if (opportunity) {
-        arbitrageOpportunities.push(opportunity);
-      }
-    });
+    if (topk && topk > 1) {
+      allMarkets.forEach(marketId => {
+        const opportunity = analyzeMarketTopK(marketId, oddsData, activeBookmakers, {
+          topk: topk || 3,
+          verbose: true,
+          includeBetDistribution: true,
+          maxResults: 20,
+        });
+        if (opportunity.length > 0) {
+          arbitrageOpportunities.push(...opportunity);
+        }
+      });
+    } else {
+      allMarkets.forEach(marketId => {
+        const opportunity = analyzeMarket(marketId, oddsData, activeBookmakers, verbose);
+        if (opportunity) {
+          arbitrageOpportunities.push(opportunity);
+        }
+      });
+    }
 
     // Return structured result
     return {
@@ -59,7 +77,6 @@ export async function calculateArbitrage(fixtureId?: string, verbose: boolean = 
       },
       timestamp: new Date().toISOString()
     };
-
   } catch (error) {
     const errorMessage = error instanceof Error ? error.message : String(error);
     throw new Error(`Arbitrage calculation failed: ${errorMessage}`);
@@ -73,16 +90,19 @@ if (require.main === module) {
       // Default to local file loading to avoid API issues
 
       // To test API loading, uncomment the line below:
-      // const fixtureId = 'id1000232463448499'; // and pass fixtureId to calculateArbitrage
-      const result = await calculateArbitrage(undefined, false);
+      const fixtureId = undefined; // and pass fixtureId to calculateArbitrage - id1000232463448499
+      const topk = 3; // Set desired top-K value or null for standard analysis
+      const result = await calculateArbitrage(fixtureId, topk, false);
 
       // Display formatted results
       displayResults(result);
       
       // Export to JSON
-      exportToJson(result);
-      
+      const filename = topk && topk > 1 ? `./src/arbitrage-results-topk.json` : './src/arbitrage-results.json';
+      exportToJson(result, filename);
+
       console.log(`
+        ${topk && topk > 1 ? `Top-${topk} Market analysis` : 'Best odds Market analysis'} completed.
         Markets analyzed: ${result.analysis.analyzedMarkets}, 
         Active bookmakers: ${result.analysis.totalActiveBookmakers}, 
         Opportunities found: ${result.analysis.totalOpportunities}

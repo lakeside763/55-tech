@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import axios from 'axios';
-import { ArbitrageOpportunity, OddsData } from "./types";
+import { AnalyzeOptions, ArbitrageOpportunity, OddsData, OddsOption, OutcomeOddsMap } from "./types";
 import { roundTo2, roundTo4 } from './utils';
 
 // Configuration for API calls
@@ -173,7 +173,7 @@ function calculateArbitrageForMarket(
     0
   );
   totalImpliedProbability = roundTo4(totalImpliedProbability);
-  
+
   // Check if arbitrage opportunity exists (total implied probability < 1)
   if (totalImpliedProbability >= 1.0) {
     return null;
@@ -262,4 +262,147 @@ export function analyzeMarket(
   }
 
   return opportunity;
+}
+
+
+/**
+ * 1 Collects odds per outcome across bookmakers and limits to Top-K.
+ */
+export function buildOutcomeOddsMap(
+  marketId: string,
+  oddsData: OddsData,
+  activeBookmakers: string[],
+  topK: number = 3
+): OutcomeOddsMap {
+  const marketOutcomes = getMarketOutcomes(marketId, oddsData, activeBookmakers);
+  const outcomesOdds: OutcomeOddsMap = {};
+
+  for (const outcomeId of marketOutcomes) {
+    const allOdds: OddsOption[] = [];
+
+    for (const bookmakerName of activeBookmakers) {
+      const market = oddsData.bookmakerOdds[bookmakerName].markets[marketId];
+      const player = market?.outcomes[outcomeId]?.players["0"];
+
+      if (player && player.active && player.price > 1) {
+        allOdds.push({ bookmaker: bookmakerName, odds: player.price });
+      }
+    }
+
+    // Sort odds descending odds and limit to Top-K
+    outcomesOdds[outcomeId] = allOdds
+      .sort((a, b) => b.odds - a.odds)
+      .slice(0, topK);
+  }
+
+  return outcomesOdds;
+}
+
+/**
+ * 2️ Generic Cartesian-product generator (iterative, not recursive).
+ */
+export function generateCombinations<T>(
+  arrays: T[][],
+  maxCombinations: number = 10000
+): T[][] {
+  const totalCombinations = arrays.reduce((acc, curr) => acc * curr.length, 1);
+
+  if (totalCombinations > maxCombinations) {
+    console.warn(`Warning: Generating ${totalCombinations} combinations exceeds the limit of ${maxCombinations}. Aborting.`);
+    return [];
+  }
+
+  return arrays.reduce<T[][]>(
+    (acc, curr) => acc.flatMap(a => curr.map(b => [...a, b])),
+    [[]]
+  );
+}
+
+/**
+ * 3 Evaluates all bookmaker combinations for arbitrage opportunities.
+ */
+export function evaluateCombinations(
+  marketId: string,
+  outcomeIds: string[],
+  combos: OddsOption[][],
+  includeBetDistribution = false
+): ArbitrageOpportunity[] {
+  const opportunities: ArbitrageOpportunity[] = [];
+
+  for (const combo of combos) {
+    const impliedSum = combo.reduce((sum, option) => sum + (1 / option.odds), 0);
+
+    if (impliedSum < 1) {
+      const arbitragePercentage = ((1 - impliedSum) / impliedSum) * 100;
+
+      const outcomes = combo.map((option, i) => ({
+        outcomeId: outcomeIds[i],
+        bookmaker: option.bookmaker,
+        odds: option.odds,
+        impliedProbability: parseFloat((1 / option.odds).toFixed(4))
+      }));
+
+      let betDistribution: any[] = [];
+      if (includeBetDistribution) {
+        betDistribution = outcomes.map(item => ({
+          outcomeId: item.outcomeId,
+          bookmaker: item.bookmaker,
+          betPercentage: parseFloat(((item.impliedProbability / impliedSum) * 100).toFixed(2)),
+          requiredStake: parseFloat(((item.impliedProbability / impliedSum) * 100).toFixed(2)) // Assuming $100 total stake
+        }))
+      }
+
+      opportunities.push({
+        market: marketId,
+        outcomes,
+        totalImpliedProbability: parseFloat(impliedSum.toFixed(4)),
+        arbitragePercentage: parseFloat(arbitragePercentage.toFixed(2)),
+        betDistribution
+      });
+    }
+  }
+
+  return opportunities;
+}
+
+export function analyzeMarketTopK(
+  marketId: string,
+  oddsData: OddsData,
+  activeBookmakers: string[],
+  options: AnalyzeOptions = {
+    topk: 3,
+    maxResults: 5,
+    verbose: false,
+    includeBetDistribution: false
+  }
+): ArbitrageOpportunity[] {
+  let { topk, maxResults, verbose, includeBetDistribution } = options;
+
+  topk = Math.min(Math.max(topk || 3, 1), 10); // Clamp between 1 and 10
+  maxResults = Math.min(Math.max(maxResults || 5, 1), 20); // Clamp between 1 and 20
+
+  if (verbose) {
+    console.log(`Building outcome odds map for market ${marketId}...`);
+  }
+
+  const outcomeOdds = buildOutcomeOddsMap(marketId, oddsData, activeBookmakers, topk);
+  const outcomeIds = Object.keys(outcomeOdds);
+
+  if (verbose) {
+    console.log(`\nAnalyzing market ${marketId} with Top-${topk} odds per outcome.`);
+  }
+
+  const oddsArrays = outcomeIds.map(oId => outcomeOdds[oId]);
+  const allCombinations = generateCombinations(oddsArrays);
+
+  if (verbose) {
+    console.log(`Total combinations to evaluate: ${allCombinations.length}`);
+  }
+
+  // Evaluate each combination
+  const opportunities = evaluateCombinations(marketId, outcomeIds, allCombinations, includeBetDistribution);
+
+  // Sort by best arbitrage percentage and optionally limit
+  const sorted = opportunities.sort((a, b) => b.arbitragePercentage - a.arbitragePercentage);
+  return sorted.slice(0, maxResults);
 }

@@ -40,6 +40,13 @@ export interface OddsData {
   };
 }
 
+interface BetDistribution {
+  outcomeId: string;
+  bookmaker: string;
+  betPercentage: number;
+  requiredStake: number;
+}
+
 export interface ArbitrageOpportunity {
   market: string;
   outcomes: {
@@ -50,12 +57,7 @@ export interface ArbitrageOpportunity {
   }[];
   totalImpliedProbability: number;
   arbitragePercentage: number;
-  betDistribution: {
-    outcomeId: string;
-    bookmaker: string;
-    betPercentage: number;
-    requiredStake: number;
-  }[];
+  betDistribution: BetDistribution[];
 }
 
 export interface ArbitrageAnalysisResult {
@@ -73,4 +75,20 @@ export interface ArbitrageAnalysisResult {
     opportunities: ArbitrageOpportunity[];
   };
   timestamp: string;
+}
+
+export interface OddsOption {
+  bookmaker: string;
+  odds: number;
+}
+
+export interface OutcomeOddsMap {
+  [outcomeId: string]: OddsOption[];
+}
+
+export interface AnalyzeOptions {
+  topk?: number;
+  maxResults?: number;
+  verbose?: boolean;
+  includeBetDistribution?: boolean;
 }
