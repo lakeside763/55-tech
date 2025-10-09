@@ -48,3 +48,13 @@ export function exportToJson(result: ArbitrageAnalysisResult, fileName: string =
     throw new Error(`Failed to export results: ${errorMessage}`);
   }
 }
+
+export function roundTo4(value: number): number {
+  const factor = Math.pow(10, 4);
+  return Math.round(value * factor) / factor;
+}
+
+export function roundTo2(value: number): number {
+  const factor = Math.pow(10, 2);
+  return Math.round(value * factor) / factor;
+}

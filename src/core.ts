@@ -1,6 +1,7 @@
 import * as fs from 'fs';
 import axios from 'axios';
 import { ArbitrageOpportunity, OddsData } from "./types";
+import { roundTo2, roundTo4 } from './utils';
 
 // Configuration for API calls
 const BASE_URL = process.env.BASE_URL || 'https://api.oddspapi.io';
@@ -164,24 +165,25 @@ function calculateArbitrageForMarket(
     outcomeId,
     bookmaker: data.bookmaker,
     odds: data.odds,
-    impliedProbability: 1 / data.odds
+    impliedProbability: roundTo4(1 / data.odds)
   }));
 
-  const totalImpliedProbability = impliedProbabilities.reduce(
+  let totalImpliedProbability = impliedProbabilities.reduce(
     (sum, item) => sum + item.impliedProbability, 
     0
   );
-
+  totalImpliedProbability = roundTo4(totalImpliedProbability);
+  
   // Check if arbitrage opportunity exists (total implied probability < 1)
   if (totalImpliedProbability >= 1.0) {
     return null;
   }
 
-  const arbitragePercentage = ((1 - totalImpliedProbability) / totalImpliedProbability) * 100;
+  const arbitragePercentage = roundTo2(((1 - totalImpliedProbability) / totalImpliedProbability) * 100);
 
   // Calculate optimal bet distribution for $100 total stake
   const betDistribution = impliedProbabilities.map(item => {
-    const betPercentage = (item.impliedProbability / totalImpliedProbability) * 100;
+    const betPercentage = roundTo2((item.impliedProbability / totalImpliedProbability) * 100);
     return {
       outcomeId: item.outcomeId,
       bookmaker: item.bookmaker,
