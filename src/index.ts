@@ -31,22 +31,17 @@ export async function calculateArbitrage(
 
     // Get all available markets
     const allMarkets = getAllMarkets(oddsData, activeBookmakers);
-    
-    // For API data, limit markets to prevent memory issues
-    const marketsToAnalyze = Array.from(allMarkets).slice(0, fixtureId ? 10 : allMarkets.size);
+  
     
     if (verbose) {
       console.log(`Available markets: ${Array.from(allMarkets).join(', ')}`);
-      if (fixtureId && allMarkets.size > 10) {
-        console.log(`Limiting analysis to first ${marketsToAnalyze.length} markets for memory efficiency`);
-      }
     }
 
     // Analyze each market for arbitrage opportunities
     const arbitrageOpportunities: ArbitrageOpportunity[] = [];
 
     if (topk && topk > 1) {
-      marketsToAnalyze.forEach(marketId => {
+      allMarkets.forEach(marketId => {
         const opportunity = analyzeMarketTopK(marketId, oddsData, activeBookmakers, {
           topk,
           verbose,
@@ -58,7 +53,7 @@ export async function calculateArbitrage(
         }
       });
     } else {
-      marketsToAnalyze.forEach(marketId => {
+      allMarkets.forEach(marketId => {
         const opportunity = analyzeMarket(marketId, oddsData, activeBookmakers, verbose);
         if (opportunity) {
           arbitrageOpportunities.push(opportunity);
@@ -76,7 +71,7 @@ export async function calculateArbitrage(
         sport: oddsData.sportName
       },
       analysis: {
-        analyzedMarkets: marketsToAnalyze.length,
+        analyzedMarkets: allMarkets.size,
         totalActiveBookmakers: activeBookmakers.length,
         totalOpportunities: arbitrageOpportunities.length,
         opportunities: arbitrageOpportunities
@@ -96,7 +91,7 @@ if (require.main === module) {
       // Default to local file loading to avoid API issues
 
       // To test API loading, uncomment the line below:
-      const fixtureId = 'id1000069161840496'; // and pass fixtureId to calculateArbitrage - id1000069161840496
+      const fixtureId = 'id1004504763840467'; // and pass fixtureId to calculateArbitrage - id1000069161840496
       const topk = 3; // Reduced from 3 to 2 for API data to prevent memory issues
       const verbose = true; // Enable verbose logging to monitor memory usage
 

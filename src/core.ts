@@ -378,8 +378,8 @@ export function analyzeMarketTopK(
 ): ArbitrageOpportunity[] {
   let { topk, maxResults, verbose, includeBetDistribution } = options;
 
-  topk = Math.min(Math.max(topk || 3, 1), 3); // Clamp between 1 and 3
-  maxResults = Math.min(Math.max(maxResults || 5, 1), 5); // Clamp between 1 and 5
+  topk = Math.min(Math.max(topk || 3, 1), 5); // Clamp between 1 and 5
+  maxResults = Math.min(Math.max(maxResults || 5, 1), 20); // Clamp between 1 and 20
 
   if (verbose) {
     console.log(`Building outcome odds map for market ${marketId}...`);
